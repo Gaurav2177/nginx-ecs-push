@@ -32,7 +32,7 @@ jobs:
       AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
       IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
       IMAGE_TAG: ${{ github.sha }}
-      ECS_REPO: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.IMAGE_NAME }}
+      ECS_REPO: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.awsamazon.com/${{ secrets.IMAGE_NAME }}
 
     steps:
       - name: Checkout code
