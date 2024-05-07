@@ -50,7 +50,7 @@ jobs:
         run: |
           aws ecs register-task-definition \
             --family nginx-task \
-            --container-definitions '[{"name":"my-container","image":"058264420716".dkr.ecr.us-east-1.amazonaws.com/ecr-nginx","portMappings":[{"containerPort":80}],"memoryReservation":128}]'
+            --container-definitions '[{"name":"my-container","image":"058264420716.dkr.ecr.us-east-1.amazonaws.com/ecr-nginx","portMappings":[{"containerPort":80}],"memoryReservation":128}]'
      # Step to create ECS service
       - name: Create or Update ECS Service with Retry
         run: |
