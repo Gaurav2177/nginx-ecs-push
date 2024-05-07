@@ -39,8 +39,8 @@ jobs:
           # push it to ECR so that it can
           # be deployed to ECS.
           docker build -t $ECR_REGISTRY/ecr-project9047:github.sha -f Dockerfile.yml .
-          docker push $ECR_REGISTRY/ecr-project9047:github.sha
-          echo "image=$ECR_REGISTRY/ecr-project9047:github.sha" >> $GITHUB_OUTPUT
+          docker push $ECR_REGISTRY/ecr-nginx:github.sha
+          echo "image=$ECR_REGISTRY/ecr-nginx:github.sha" >> $GITHUB_OUTPUT
          # Step to create ECS cluster
       - name: Create ECS Cluster
         run: |
